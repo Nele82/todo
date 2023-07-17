@@ -14,8 +14,12 @@ const model = {
     handleAddTask: function() {
       const text = document.getElementById('text');
       const taskName = text.value;
-      controller.addTask(taskName);
-      text.value = '';
+      if (taskName == '') {
+        alert('Please enter a task name');
+      } else {
+        controller.addTask(taskName);
+        text.value = '';
+      }
     },
   
     renderTasks: function() {

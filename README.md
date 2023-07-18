@@ -2,11 +2,11 @@
 
 ## Brief description
 
-To put it simply, the App takes the user's text input, get's it into the array, stringifies the array into a cookie and then renders all the tasks from the very same cookie.
+To put it simply, the App takes the user's text input, gets it into the array, stringifies the array into a cookie and then renders all the tasks from the very same cookie.
 
 ## Functionalities 
 
-- Uses cookies to store the information about your tasks, instead of using your own memory or a database;
+- Uses a cookie to store the information about your tasks, instead of using your own memory or a database;
 
 - Keeps the info about all tasks for 30 days, until the next update from which point it exstends the expiry period for another 30 days for all tasks (as all of them are in the same array) thus you don't need to worry about the expiry period of an individual task;
 
@@ -24,7 +24,7 @@ This App is built by using MVC architecture (pattern), meaning it has 3x main co
 
  ## Technologies used
 
-The App is coded in HTML and CSS, however mostly in JavaScript.
+The App is coded in HTML and CSS, however, even though the App contains more CSS code in percentage of all - most effort was put in JavaScript.
 
 `` Cookies & localStorage ``
 

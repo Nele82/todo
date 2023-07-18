@@ -22,6 +22,7 @@
       } else {
         controller.addTask(taskName);
         text.value = '';
+        text.focus()
       }
     },
     // Creates a new task-container with the task name based on the 'tasks' array 
@@ -45,7 +46,7 @@
         }
         document.getElementById('completedMsg').style.display = 'none';
       } else {
-        document.getElementById('completedMsg').style.display = 'block';
+        document.getElementById('completedMsg').style.display = 'flex';
       }
     }
   };

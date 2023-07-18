@@ -1,3 +1,5 @@
+/* G E N E R A L */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,72 +7,26 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('img/desk-g62c78a5ce_1920.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-size: cover;
 }
 
 #add-task-container {
-    width: 22vw;
-
-    padding: 20px 10px;
-
     background: white;
-
-    display: flex;
-    flex-wrap: wrap;
-
-    border-radius: 20px;
-    box-shadow: 0 0 3px;
-
-    margin: 20px 0 20px 0;
-
-    display: flex;
-}
-
-#container {
-    overflow: auto;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-
-    padding: 1%;
-}
-
-#text {
-    width: 70%;
-    margin-right: 10px;
-    margin-left: 10px;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    padding: 5px;
 }
 
 #btn1 {
-    height: 5vh;
-    width: 2.5vw;
-
     flex: 1;
     transition: 0.3s;
-
-    font-size: 1.2rem;
-
-    padding: 5px;
-    margin-right: 10px;
 
     background-color: white;
     color: green;
 
     border: 2px solid green;
-    border-radius: 10px;
 }
 
 #btn1:hover {
@@ -78,53 +34,31 @@ body {
     color: white;
 }
 
-/* Styling for a task which gets added to to-do list */
+/* Styling for a task which gets added to to-do list container */
+
+#container {
+    overflow: auto;
+}
 
 #container div {
-    width: 20vw;
-    height: 9vh;
-
-    display: flex;
-    align-items: center;
-
-    margin: 1% 1% 0 1%;
-
     background: white;
-    border-radius: 20px;
-    box-shadow: 0 0 3px;
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: larger;
 }
 
 #container div span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    height: 5vh;
-    width: 15vw;
-
-    margin-right: 5%;
+    overflow: auto;
 }
 
-#container div button {    
-    height: 5vh;
-    width: 2.5vw;
-
+#container div button { 
     flex: 1;
     transition: 0.3s;
-
-    font-size: 1.2rem;
-
-    padding: 5px;
-    margin: 15px;
 
     background-color: white;
     color: red;
 
     border: 2px solid red;
-    border-radius: 10px;
 }
 
 #container div button:hover {
@@ -136,3 +70,142 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: larger;
 }
+
+/* S C R E E N   S I Z E S */
+
+/* M O B I L E */
+@media only screen and (max-width: 640px) {
+
+    /* Body (MOBILE)*/
+
+    body {        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        padding: 5% 0;
+    }
+
+    /* Add task control container (MOBILE) */
+
+    #add-task-container {
+        width: 90%;
+    
+        padding: 4% 5%;
+    
+        display: flex;
+        flex-wrap: wrap;
+    
+        border-radius: 3.5vw;
+        box-shadow: 0 0 .25vw;
+    }
+    
+    #text {
+        width: 70%;
+    
+        border-radius: 2vw;
+    
+        font-size: 5vw;
+    
+        padding: 1vw;
+        margin: 0 4% 0 0;
+    }
+    
+    #btn1 {
+        flex: 1;
+        transition: 0.3s;
+    
+        font-size: 5vw;
+        border-radius: 2vw;
+    
+        padding: 1vw;
+    }
+    
+    /* Task container(s) (MOBILE)*/
+
+    #container {
+        width: 90%;
+        overflow: auto;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 1% 1%;
+        margin-top: 1%;
+    }
+    
+    #container div {
+        width: 100%;
+    
+        display: flex;
+        align-items: center;
+    
+        padding: 4% 5%;
+        margin-bottom: 2%;
+    
+        border-radius: 3.5vw;
+        box-shadow: 0 0 .25vw;
+    
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: larger;
+    }
+    
+    #container div span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        width: 75%;
+    
+        margin-right: 2.5%;
+        padding: .5vw;
+    
+        overflow: auto;
+    
+        font-size: 5vw;
+    }
+    
+    #container div button { 
+        flex: 1;
+        transition: 0.3s;
+    
+        font-size: 5vw;
+        border-radius: 2vw;
+    
+        padding: 1vw;
+    }
+
+    /* Complete tasks message (MOBILE)*/
+
+    #completedMsg {
+        width: 90%;
+        height: 25vw;
+        color: rgb(255, 255, 255);
+
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+        text-shadow: 0 0 .75vw rgb(255, 255, 255);
+
+        background-color: rgba(14, 15, 11, 0.219);
+        color: rgba(134, 92, 8, 0.479);
+
+        font-size: 6vw;
+
+        padding: 1% 0;
+        margin: auto 0;
+
+        border-radius: 3.5vw;
+
+        transform: rotate(-45deg);
+    }
+}
+
+/* T A B L E T */
+@media only screen and (min-width: 641px) and (max-width: 1007px) {}
+
+/* D E S K T O P */
+@media only screen and (min-width: 1008px) {}

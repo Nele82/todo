@@ -147,9 +147,6 @@ body {
     
         border-radius: 3.5vw;
         box-shadow: 0 0 .25vw;
-    
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: larger;
     }
     
     #container div span {
@@ -159,7 +156,7 @@ body {
     
         width: 75%;
     
-        margin-right: 2.5%;
+        margin-left: 2.5%;
         padding: .5vw;
     
         overflow: auto;
@@ -180,32 +177,277 @@ body {
     /* Complete tasks message (MOBILE)*/
 
     #completedMsg {
-        width: 90%;
-        height: 25vw;
-        color: rgb(255, 255, 255);
+        width: 100%;
 
         justify-content: center;
         align-items: center;
 
         text-align: center;
-        text-shadow: 0 0 .75vw rgb(255, 255, 255);
+        text-shadow: 0 0 .25vw rgb(255, 255, 255);
 
         background-color: rgba(14, 15, 11, 0.219);
-        color: rgba(134, 92, 8, 0.479);
+        color: rgba(255, 255, 255, 0);
 
-        font-size: 6vw;
+        font-size: 5vw;
 
-        padding: 1% 0;
+        padding: 4% 0;
         margin: auto 0;
-
-        border-radius: 3.5vw;
-
-        transform: rotate(-45deg);
     }
 }
 
 /* T A B L E T */
-@media only screen and (min-width: 641px) and (max-width: 1007px) {}
+@media only screen and (min-width: 641px) and (max-width: 1007px) {
+        /* Body (TABLET)*/
+
+        body {        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            padding: 5% 0;
+        }
+    
+        /* Add task control container (TABLET) */
+    
+        #add-task-container {
+            width: 70%;
+        
+            padding: 3% 5%;
+        
+            display: flex;
+            flex-wrap: wrap;
+        
+            border-radius: 3.5vw;
+            box-shadow: 0 0 .25vw;
+        }
+        
+        #text {
+            width: 70%;
+        
+            border-radius: 2vw;
+        
+            font-size: 3.5vw;
+        
+            padding: 1vw;
+            margin: 0 4% 0 0;
+        }
+        
+        #btn1 {
+            flex: 1;
+            transition: 0.3s;
+        
+            font-size: 3.5vw;
+            border-radius: 2vw;
+        
+            padding: 1vw;
+        }
+        
+        /* Task container(s) (TABLET)*/
+    
+        #container {
+            width: 95%;
+            overflow: auto;
+        
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+    
+            padding: 1% 1%;
+            margin-top: 1%;
+        }
+        
+        #container div {
+            width: 45%;
+        
+            display: flex;
+            align-items: center;
+        
+            padding: 2% 3%;
+            margin-bottom: 2%;
+        
+            border-radius: 3.5vw;
+            box-shadow: 0 0 .25vw;
+        }
+        
+        #container div span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            width: 75%;
+        
+            margin-left: 2.5%;
+            padding: .5vw;
+        
+            font-size: 3vw;
+        }
+        
+        #container div button { 
+            flex: 1;
+            transition: 0.3s;
+        
+            font-size: 3vw;
+            border-radius: 2vw;
+        
+            padding: 1vw;
+        }
+    
+        /* Complete tasks message (TABLET)*/
+    
+        #completedMsg {
+            width: 100%;
+    
+            justify-content: center;
+            align-items: center;
+    
+            text-align: center;
+            text-shadow: 0 0 .25vw rgb(255, 255, 255);
+    
+            background-color: rgba(14, 15, 11, 0.219);
+            color: rgba(255, 255, 255, 0);
+    
+            font-size: 3vw;
+    
+            padding: 1.5% 0;
+        }
+}
 
 /* D E S K T O P */
-@media only screen and (min-width: 1008px) {}
+@media only screen and (min-width: 1008px) {
+            /* Body (DESKTOP)*/
+
+            body {        
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        
+                padding: 2.5% 0;
+            }
+        
+            /* Add task control container (DESKTOP) */
+        
+            #add-task-container {
+                width: 45%;
+            
+                padding: 1.25% 2%;
+            
+                display: flex;
+                flex-wrap: wrap;
+            
+                border-radius: 1.75vw;
+                box-shadow: 0 0 .25vw;
+            }
+            
+            #text {
+                width: 80%;
+            
+                border-radius: 1vw;
+            
+                font-size: 2vw;
+            
+                padding: .5vw;
+                margin: 0 4% 0 0;
+            }
+            
+            #btn1 {
+                flex: 1;
+                transition: 0.3s;
+            
+                font-size: 2vw;
+                border-radius: 1vw;
+            
+                padding: .5vw;
+            }
+            
+            /* Task container(s) (DESKTOP)*/
+        
+            #container {
+                width: 100%;
+                overflow: auto;
+            
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+        
+                padding: 1% .5%;
+                margin-top: 1%;
+            }
+            
+            #container div {
+                width: 31%;
+            
+                display: flex;
+                align-items: center;
+            
+                padding: 1% 1%;
+                margin-bottom: 2%;
+            
+                border-radius: 1.75vw;
+                box-shadow: 0 0 .25vw; 
+            }
+            
+            #container div span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            
+                width: 85%;
+            
+                margin-left: 2.5%;
+                padding: .5vw;
+            
+                font-size: 1.5vw;
+            }
+            
+            #container div button { 
+                flex: 1;
+                transition: 0.3s;
+            
+                font-size: 1.5vw;
+                border-radius: 1vw;
+            
+                padding: .5vw;
+            }
+
+            #text {
+            width: 80%;
+        
+            border-radius: 1vw;
+        
+            font-size: 2vw;
+        
+            padding: .5vw;
+            margin: 0 4% 0 0;
+            }
+            
+            #btn1 {
+                flex: 1;
+                transition: 0.3s;
+            
+                font-size: 2vw;
+                border-radius: 1vw;
+            
+                padding: .5vw;
+            }
+        
+            /* Complete tasks message (DESKTOP)*/
+        
+            #completedMsg {
+                width: 100%;
+        
+                justify-content: center;
+                align-items: center;
+        
+                text-align: center;
+                text-shadow: 0 0 .1vw rgb(255, 255, 255);
+        
+                background-color: rgba(14, 15, 11, 0.219);
+                color: rgba(255, 255, 255, 0);
+        
+                font-size: 1.75vw;
+        
+                padding: 1% 0;
+            }
+}

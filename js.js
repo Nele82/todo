@@ -76,11 +76,11 @@
         localStorage.setItem('cookieConsent', true);
         // Remove the consent banner
         document.getElementById('cookieConsentBanner').remove();
-        // Place your first-party cookie here
+        // First-party cookie 
         document.cookie = "consent=yes; expires=Thu, 01 Jan 2024 00:00:00 UTC; path=/;";
       });
     } else {
-      // User has already given consent, place your first-party cookie directly
+      // User has already given consent(first-party cookie placed directly)
       document.cookie = "consent=yes; expires=Thu, 01 Jan 2024 00:00:00 UTC; path=/;";
     }
       view.init();

@@ -18,7 +18,7 @@
       const text = document.getElementById('text');
       const taskName = text.value;
       if (taskName == '') {
-        alert('Please enter a task name');
+        alert('Please enter a task');
       } else {
         controller.addTask(taskName);
         text.value = '';
@@ -114,8 +114,8 @@
       const expires = 'expires=' + date.toUTCString();
       document.cookie = name + '=' + value + ';' + expires + '; path=/;';
     },
-    // Gets the array of tasks as JSON, if any tasks were previously stored
-    // Otherwise it returns an empty array
+    // Gets the array of tasks as JSON, if any tasks were previously stored.
+    // Otherwise it returns an empty array.
     getCookie: function(name) {
       const cookies = document.cookie.split(';');
       for (let i = 0; i < cookies.length; i++) {

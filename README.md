@@ -46,7 +46,7 @@ It't worth noting that the elements alignment is solely controlled by the Flexbo
 
 Noticed how every cookie is separated with the semicolon (';') ? To read a specific cookie a 'split()' method is used with a ';' passed to it in order to extract the cookie value. So, when a user enters a text containing a ';', to put it simply, the 'document.cookie' property is unable to determine where the cookie ends and the next cookie starts and an exception is thrown. 
 
-This is solved by using the RegExp pattern to control the user's input.
+This was solved by using the RegExp pattern to control the user's input.
 
 I surely hope I made the code easier to understand
 

@@ -13,12 +13,16 @@
       this.renderTasks();
     },
     // Takes a text input and passes it to the 'addTask' method and then clears the
-    // text input field
+    // text input field. NOTE: a RegExp pattern was set in order to prevent users from using
+    // the semicolon ( ; ) character when entering a task as it creates a bug for the 'document.cookie' property
     handleAddTask: function() {
+      const re = new RegExp(';', 'g');
       const text = document.getElementById('text');
       const taskName = text.value;
       if (taskName == '') {
         alert('Please enter a task');
+      } else if (re.test(taskName) == true) {
+        alert('Error! Please enter a task without using a semicolon ( ; )');
       } else {
         controller.addTask(taskName);
         text.value = '';

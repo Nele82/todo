@@ -1,8 +1,8 @@
 #Simple MVC To do App
 
-## Brief description
+## Description
 
-To put it simply, the App takes the user's text input, gets it into the array, stringifies the array into a cookie and then renders all the tasks from the very same cookie.
+To put it simply, the App takes the user's text input, gets it into the array, stringifies the array into a cookie and then renders all the tasks from the very same cookie. Seeing how cookies are a way to store small pieces of data on the client's browser, it seemed convenient to create a reminder App without using a database or being dependant on internet connection (cookies are stored in the browser whether online or not).
 
 ## Functionalities 
 
@@ -37,6 +37,16 @@ In order to control the rendering process as well as handle the events, methods 
 `` CSS ``
 
 It't worth noting that the elements alignment is solely controlled by the Flexbox.
+
+ ## Bug fix
+
+ During App testing, it was noticed that the App is throwing an exception whenever entering the text using ';' character. The issue lies in the cookie syntax. To create a cookie, the document.cookie property is used to set the cookie value. The general syntax for setting a cookie is as follows:
+
+ document.cookie = "cookieName=cookieValue; expires=expirationDate; path=pathValue;";
+
+Noticed how every cookie is separated with the semicolon (';') ? To read a specific cookie a 'split()' method is used with a ';' passed to it in order to extract the cookie value. So, when a user enters a text containing a ';', to put it simply, the 'document.cookie' property is unable to determine where the cookie ends and the next cookie starts and an exception is thrown. 
+
+This is solved by using the RegExp pattern to control the user's input.
 
 I surely hope I made the code easier to understand
 
